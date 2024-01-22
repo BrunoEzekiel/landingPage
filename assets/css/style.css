@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #b68f0f;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+.cabecalho_menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho_menu_link{
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+.apresentacao{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.apresentacao_conteudo {
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.apresentacao_conteudo_titulo{
+    font-size: 36px;
+    font-family: var(--fonte-primaria);
+}
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+.apresentacao_conteudo_texto{
+    font-size: 24px;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao_links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+.apresentacao_links_subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 24px;
+}
+.apresentacao_links_link {
+   
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+}
+
+#instagram-link img,
+#linkedin-link img,
+#github-link img {
+    width: 24px; /* Defina a largura desejada para o ícone */
+    height: auto; /* Mantenha a proporção original do ícone */
+    margin-left: 8px; /* Adicione uma margem à esquerda do ícone para espaçamento */
+}
+#perfil_imagen{
+    border-radius: 100%; /* Define a borda como um círculo */
+    width: 350px; /* Defina a largura desejada para a imagem */
+    height: 350px; /* Defina a altura desejada para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra completamente a área do círculo */
+    position:relative; /* Define a posição relativa */
+    
+    transform: translateY(-50%); /* Centraliza a imagem horizontalmente */
+    
+}
+
+.apresentacao_links_link:hover{
+    background-color: var(--cor-hover);
+}
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* Adaptações para telas menores (ex.: dispositivos móveis) */
+@media (max-width: 1260px) {
+    .cabecalho {
+        padding: 10%; /* Reduz o espaçamento no cabeçalho */
+    }
+
+    .cabecalho_menu {
+        justify-content: center;
+        gap: 20px; /* Reduz o espaçamento entre os itens do menu */
+    }
+
+    .apresentacao {
+        padding:0% 10%; /* Ajusta o espaçamento na seção de apresentação */
+        flex-direction: column-reverse; /* Muda para um layout de coluna */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .apresentacao_conteudo {
+        width: auto;
+    }
+
+    .apresentacao_conteudo_titulo {
+        font-size: 2rem; /* Tamanho menor para o título */
+    }
+
+    .apresentacao_conteudo_texto {
+        font-size: 1.2rem; /* Tamanho menor para o texto */
+    }
+
+    .apresentacao_links {
+        gap: 20px; /* Reduz o espaçamento entre os links */
+    }
+
+    .apresentacao_links_subtitulo {
+        font-size: 1.2rem; /* Tamanho menor para o subtítulo */
+    }
+
+    .apresentacao_links_link {
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    #perfil_imagen {
+        position:relative; /* Define a posição relativa */
+        transform: translateY(-0); 
+        width: 50%; /* Ocupa toda a largura disponível */
+        height: auto; /* Altura automática para manter a proporção */
+        margin-top: 24px; /* Adiciona uma margem superior */
+    }
+
+    .rodape {
+        padding: 20px; /* Ajusta o espaçamento no rodapé */
+        font-size: 1.2rem; /* Tamanho menor para o texto do rodapé */
+    }
+       
+    
+}
